@@ -1,8 +1,9 @@
 package cc.lixou.beachbuildersextension.items.menus
 
+import cc.lixou.beachbuildersextension.items.tools.FlowerCrafterItem
+import cc.lixou.stracciatella.inventory.extensions.setItemStack
 import cc.lixou.stracciatella.inventory.extensions.styleRadialBackground
 import cc.lixou.stracciatella.item.CustomItem
-import cc.lixou.stracciatella.item.extensions.getCreamID
 import net.minestom.server.entity.Player
 import net.minestom.server.event.inventory.InventoryPreClickEvent
 import net.minestom.server.event.player.PlayerSwapItemEvent
@@ -48,6 +49,7 @@ object ToolsMenuItem : CustomItem(
         val inventory =
             Inventory(InventoryType.CHEST_3_ROW, "<gradient:#cecece:white><bold>Tools".formatMini())
         inventory.styleRadialBackground(Material.LIGHT_GRAY_STAINED_GLASS_PANE, 3)
+        inventory.setItemStack(2, 5, FlowerCrafterItem.createItemStack())
         player.openInventory(inventory)
     }
 
