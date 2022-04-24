@@ -1,8 +1,8 @@
-package cc.lixou.extensionname
+package cc.lixou.beachbuildersextension
 
 import net.minestom.server.extensions.Extension
 
-class ExtensionName : Extension() {
+class BeachBuildersExtension : Extension() {
 
     override fun initialize() {
         TODO("Not yet implemented")
