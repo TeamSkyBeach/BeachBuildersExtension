@@ -9,6 +9,7 @@ import net.minestom.server.event.player.PlayerSwapItemEvent
 import net.minestom.server.event.player.PlayerUseItemEvent
 import net.minestom.server.inventory.Inventory
 import net.minestom.server.inventory.InventoryType
+import net.minestom.server.item.ItemHideFlag
 import net.minestom.server.item.Material
 import world.cepi.kstom.adventure.formatMini
 import world.cepi.kstom.adventure.noItalic
@@ -18,6 +19,7 @@ object ToolsMenuItem : CustomItem(
     Material.IRON_AXE,
     {
         it.meta { meta ->
+            meta.hideFlag(ItemHideFlag.HIDE_ATTRIBUTES)
             meta.displayName(
                 "<gray>» <gradient:#cecece:white><bold>Tools</bold> <gray>«".formatMini().noItalic()
             )
